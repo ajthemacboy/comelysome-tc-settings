@@ -1,4 +1,4 @@
-# This is the biome config file of the _OceanBorder2_Plains_ biome, which is a custom biome.
+# This is the biome config file of the _GreenBorder1_ForestHills_ biome, which is a custom biome.
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -28,7 +28,7 @@ ResourceInheritance: true
 # Higher numbers give a smaller biome, lower numbers a larger biome.
 # Oceans and rivers are generated using a dirrerent algorithm in the default settings,
 # (they aren't in one of the biome lists), so this setting won't affect them.
-BiomeSize: 8
+BiomeSize: 7
 
 # Biome rarity from 100 to 1. If this is normal or ice biome - chance for spawn this biome then others.
 # Example for normal biome :
@@ -40,12 +40,12 @@ BiomeRarity: 100
 
 # The hexadecimal color value of this biome. Used in the output of the /tc map command,
 # and used in the input of BiomeMode:FromImage.
-BiomeColor: #005500
+BiomeColor: #66800B
 
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
 # This will cause saplings, colors and mob spawning work as in specified biome.
-ReplaceToBiomeName: Plains
+ReplaceToBiomeName: Forest
 
 ####################
 # Isle biomes only #
@@ -59,10 +59,10 @@ IsleInBiome:
 ######################
 
 # Biome name list where this biome will be border.Like Mushroom isle shore. Use is compared as IsleInBiome
-BiomeIsBorder: _OceanBorder1_Beach_
+BiomeIsBorder: _GreenRegion_
 
 # Biome name list near border is not applied. 
-NotBorderNear: _OceanRegion_, _OceanIsland1_Epic_, Ocean, _DryRegion_, _GreenIsland1_Center_
+NotBorderNear: _GreenIsland1_Center_, _GreenIsland2_Plains_
 
 
 #######################################################################
@@ -74,16 +74,16 @@ NotBorderNear: _OceanRegion_, _OceanIsland1_Epic_, Ocean, _DryRegion_, _GreenIsl
 # BiomeHeight mean how much height will be added in terrain generation
 # It is double value from -10.0 to 10.0
 # Value 0.0 equivalent half of map height with all other default settings
-BiomeHeight: -1.8
+BiomeHeight: -1.0
 
 # Biome volatility.
-BiomeVolatility: 0.0
+BiomeVolatility: 0.3
 
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 2
+SmoothRadius: 12
 
 # If this value is greater than 0, then it will affect how much, on average, the terrain will rise before leveling off when it begins to increase in elevation.
 # If the value is less than 0, then it will cause the terrain to either increase to a lower height before leveling out or decrease in height if the value is a large enough negative.
@@ -320,18 +320,8 @@ Ore(GOLD_ORE,8,2,100.0,0,48,STONE)
 Ore(REDSTONE_ORE,7,8,100.0,0,32,STONE)
 Ore(DIAMOND_ORE,7,1,100.0,0,32,STONE)
 Ore(LAPIS_ORE,7,1,100.0,0,32,STONE)
-UnderWaterOre(SAND,7,4,100.0,DIRT,GRASS)
-UnderWaterOre(CLAY,4,1,100.0,DIRT,CLAY)
 CustomObject(UseWorld)
-Tree(1,CocoaTree,30)
-Tree(1,Acacia,30)
-Plant(Poppy,2,100.0,0,256,GRASS,DIRT)
-Plant(Dandelion,2,100.0,0,256,GRASS,DIRT)
-Plant(BlueOrchid,2,100.0,0,256,GRASS,DIRT)
-Plant(Sunflower,2,50.0,0,256,GRASS,DIRT)
-Plant(Lilac,1,50.0,0,256,GRASS,DIRT)
-Plant(RoseBush,1,50.0,0,256,GRASS,DIRT)
-Plant(Peony,1,50.0,0,256,GRASS,DIRT)
+Tree(10,Birch,5,BigTree,10,Tree,100)
 Plant(RedMushroom,1,50.0,0,256,GRASS,DIRT)
 Plant(BrownMushroom,1,50.0,0,256,GRASS,DIRT)
 Grass(Tallgrass,NotGrouped,30,100.0,GRASS,DIRT)
@@ -339,6 +329,7 @@ Plant(PUMPKIN,1,3.0,0,256,GRASS)
 Reed(SUGAR_CANE_BLOCK,3,100.0,0,256,GRASS,DIRT,SAND)
 Liquid(WATER,20,100.0,8,256,STONE)
 Liquid(LAVA,10,100.0,8,256,STONE)
+Vines(10,100.0,64,256)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -391,7 +382,7 @@ NetherFortressesEnabled: true
 VillageType: disabled
 
 # The mineshaft rarity from 0 to 100. 0 = no mineshafts, 1 = default rarity, 100 = a wooden chaos.
-MineshaftRarity: 0.1
+MineshaftRarity: 0.0
 
 # The type of the aboveground rare building in this biome. Can be desertPyramid, jungleTemple, swampHut or disabled.
 RareBuildingType: disabled
@@ -430,7 +421,7 @@ RareBuildingType: disabled
 SpawnMonsters: [{"mob": "Spider", "weight": 100, "min": 4, "max": 4}, {"mob": "Zombie", "weight": 100, "min": 4, "max": 4}, {"mob": "Skeleton", "weight": 100, "min": 4, "max": 4}, {"mob": "Creeper", "weight": 100, "min": 4, "max": 4}, {"mob": "Slime", "weight": 100, "min": 4, "max": 4}, {"mob": "Enderman", "weight": 10, "min": 1, "max": 4}, {"mob": "Witch", "weight": 5, "min": 1, "max": 1}]
 
 # The friendly creatures (cows, pigs, etc.) that spawn in this biome
-SpawnCreatures: [{"mob": "Chicken", "weight": 10, "min": 2, "max": 4}, {"mob": "Sheep", "weight": 10, "min": 2, "max": 4}]
+SpawnCreatures: [{"mob": "Chicken", "weight": 10, "min": 2, "max": 4}, {"mob": "Pig", "weight": 10, "min": 2, "max": 4}, {"mob": "Rabbit", "weight": 10, "min": 3, "max": 3}]
 
 # The water creatures (only squids in vanilla) that spawn in this biome
 SpawnWaterCreatures: [{"mob": "Squid", "weight": 10, "min": 4, "max": 4}]

@@ -59,7 +59,7 @@ IsleInBiome:
 ######################
 
 # Biome name list where this biome will be border.Like Mushroom isle shore. Use is compared as IsleInBiome
-BiomeIsBorder: _SnowPeakBorder2_ForestHills_
+BiomeIsBorder: 
 
 # Biome name list near border is not applied. 
 NotBorderNear: _SnowPeakRegion_
