@@ -28,7 +28,7 @@ ResourceInheritance: true
 # Higher numbers give a smaller biome, lower numbers a larger biome.
 # Oceans and rivers are generated using a dirrerent algorithm in the default settings,
 # (they aren't in one of the biome lists), so this setting won't affect them.
-BiomeSize: 6
+BiomeSize: 7
 
 # Biome rarity from 100 to 1. If this is normal or ice biome - chance for spawn this biome then others.
 # Example for normal biome :

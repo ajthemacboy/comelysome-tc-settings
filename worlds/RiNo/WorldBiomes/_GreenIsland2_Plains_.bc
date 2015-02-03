@@ -1,4 +1,4 @@
-# This is the biome config file of the _OceanBorder2_Plains_ biome, which is a custom biome.
+# This is the biome config file of the _GreenIsland2_Plains_ biome, which is a custom biome.
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -28,7 +28,7 @@ ResourceInheritance: true
 # Higher numbers give a smaller biome, lower numbers a larger biome.
 # Oceans and rivers are generated using a dirrerent algorithm in the default settings,
 # (they aren't in one of the biome lists), so this setting won't affect them.
-BiomeSize: 8
+BiomeSize: 5
 
 # Biome rarity from 100 to 1. If this is normal or ice biome - chance for spawn this biome then others.
 # Example for normal biome :
@@ -36,11 +36,11 @@ BiomeSize: 8
 #   50 rarity mean 1/11 chance than other
 # For isle biome this is chance to spawn isle in good place.
 # Don`t work on Ocean and River (frozen versions too) biomes until not added as normal biome.
-BiomeRarity: 100
+BiomeRarity: 97
 
 # The hexadecimal color value of this biome. Used in the output of the /tc map command,
 # and used in the input of BiomeMode:FromImage.
-BiomeColor: #005500
+BiomeColor: #7E8565
 
 # Replace this biome to specified after the terrain is generated.
 # This will make the world files contain the id of the specified biome, instead of the id of this biome.
@@ -52,17 +52,17 @@ ReplaceToBiomeName: Plains
 ####################
 
 # Biome name list where this biome will be spawned as isle. Like Mushroom isle in Ocean.  This work only if this biome is in IsleBiomes in world config
-IsleInBiome: 
+IsleInBiome: _GreenRegion_
 
 ######################
 # Border biomes only #
 ######################
 
 # Biome name list where this biome will be border.Like Mushroom isle shore. Use is compared as IsleInBiome
-BiomeIsBorder: _OceanBorder1_Beach_
+BiomeIsBorder: 
 
 # Biome name list near border is not applied. 
-NotBorderNear: _OceanRegion_, _OceanIsland1_Epic_, Ocean, _DryRegion_, _GreenIsland1_Center_
+NotBorderNear: 
 
 
 #######################################################################
@@ -74,7 +74,7 @@ NotBorderNear: _OceanRegion_, _OceanIsland1_Epic_, Ocean, _DryRegion_, _GreenIsl
 # BiomeHeight mean how much height will be added in terrain generation
 # It is double value from -10.0 to 10.0
 # Value 0.0 equivalent half of map height with all other default settings
-BiomeHeight: -1.8
+BiomeHeight: -1.2
 
 # Biome volatility.
 BiomeVolatility: 0.0
@@ -83,7 +83,7 @@ BiomeVolatility: 0.0
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 2
+SmoothRadius: 8
 
 # If this value is greater than 0, then it will affect how much, on average, the terrain will rise before leveling off when it begins to increase in elevation.
 # If the value is less than 0, then it will cause the terrain to either increase to a lower height before leveling out or decrease in height if the value is a large enough negative.
@@ -320,15 +320,11 @@ Ore(GOLD_ORE,8,2,100.0,0,48,STONE)
 Ore(REDSTONE_ORE,7,8,100.0,0,32,STONE)
 Ore(DIAMOND_ORE,7,1,100.0,0,32,STONE)
 Ore(LAPIS_ORE,7,1,100.0,0,32,STONE)
-UnderWaterOre(SAND,7,4,100.0,DIRT,GRASS)
-UnderWaterOre(CLAY,4,1,100.0,DIRT,CLAY)
 CustomObject(UseWorld)
-Tree(1,CocoaTree,30)
-Tree(1,Acacia,30)
 Plant(Poppy,2,100.0,0,256,GRASS,DIRT)
 Plant(Dandelion,2,100.0,0,256,GRASS,DIRT)
 Plant(BlueOrchid,2,100.0,0,256,GRASS,DIRT)
-Plant(Sunflower,2,50.0,0,256,GRASS,DIRT)
+Plant(Sunflower,2,100.0,0,256,GRASS,DIRT)
 Plant(Lilac,1,50.0,0,256,GRASS,DIRT)
 Plant(RoseBush,1,50.0,0,256,GRASS,DIRT)
 Plant(Peony,1,50.0,0,256,GRASS,DIRT)
@@ -430,7 +426,7 @@ RareBuildingType: disabled
 SpawnMonsters: [{"mob": "Spider", "weight": 100, "min": 4, "max": 4}, {"mob": "Zombie", "weight": 100, "min": 4, "max": 4}, {"mob": "Skeleton", "weight": 100, "min": 4, "max": 4}, {"mob": "Creeper", "weight": 100, "min": 4, "max": 4}, {"mob": "Slime", "weight": 100, "min": 4, "max": 4}, {"mob": "Enderman", "weight": 10, "min": 1, "max": 4}, {"mob": "Witch", "weight": 5, "min": 1, "max": 1}]
 
 # The friendly creatures (cows, pigs, etc.) that spawn in this biome
-SpawnCreatures: [{"mob": "Chicken", "weight": 10, "min": 2, "max": 4}, {"mob": "Sheep", "weight": 10, "min": 2, "max": 4}]
+SpawnCreatures: [{"mob": "Chicken", "weight": 10, "min": 2, "max": 4}, {"mob": "Pig", "weight": 10, "min": 2, "max": 4}, {"mob": "Rabbit", "weight": 10, "min": 3, "max": 3}, {"mob": "Sheep", "weight": 10, "min": 2, "max": 4}, {"mob": "EntityHorse", "weight": 10, "min": 2, "max": 5}]
 
 # The water creatures (only squids in vanilla) that spawn in this biome
 SpawnWaterCreatures: [{"mob": "Squid", "weight": 10, "min": 4, "max": 4}]
