@@ -77,7 +77,7 @@ NotBorderNear: _SnowPeakIsland1_Glacier_, _SnowPeakIsland2_Taiga_, _SnowPeakIsla
 BiomeHeight: -0.5
 
 # Biome volatility.
-BiomeVolatility: 0.3
+BiomeVolatility: 0.2
 
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
